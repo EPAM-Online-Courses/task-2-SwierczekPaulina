@@ -37,10 +37,10 @@ public class GuessNumberGame {
         System.out.println("Zagrajmy. Zgadnij liczbę z zakresu <1," + M + ">");
 
         try (Scanner scanner = new Scanner(System.in)) {
-            int trials = 0;
+            int trials = 1;
             while (trials <= limit) {
                 System.out.print("Twoje próby: [");
-                for (int i =0; i < trials; i++) {
+                for (int i = 0; i < trials; i++) {
                     System.out.print("*");
                 }
                 for (int i = trials; i < limit; i++) {
