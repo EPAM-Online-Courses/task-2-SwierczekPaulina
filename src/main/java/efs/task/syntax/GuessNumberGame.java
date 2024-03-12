@@ -36,7 +36,7 @@ public class GuessNumberGame {
 
         try (Scanner scanner = new Scanner(System.in)) {
             int trials = 0;
-            while (trials < limit) {
+            while (trials <= limit) {
                 System.out.print("Twoje próby: [");
                 for (int i =0; i < trials; i++) {
                     System.out.print("*");
