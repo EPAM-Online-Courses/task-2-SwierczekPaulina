@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumberGame {
-    public int M;
+    private final int M;
     //Do not modify main method
     public static void main(String[] args) {
         try {
