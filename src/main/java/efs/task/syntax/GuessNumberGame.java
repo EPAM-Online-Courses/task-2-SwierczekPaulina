@@ -20,11 +20,13 @@ public class GuessNumberGame {
         try {
             M = Integer.parseInt(argument);
         } catch (Exception e) {
-            throw new IllegalArgumentException("'" + argument + "' to NIEPOPRAWNY ARGUMENT - to nie liczba");
+            System.out.println("'" + argument + "' to NIEPOPRAWNY ARGUMENT - to nie liczba");
+            throw new IllegalArgumentException();
         }
 
         if (M < 1 || M > 400) {
-            throw new IllegalArgumentException(argument + " to NIEPOPRAWNY ARGUMENT - jest spoza zakresu <1,400>");
+            System.out.println(argument + " to NIEPOPRAWNY ARGUMENT - jest spoza zakresu <1,400>");
+            throw new IllegalArgumentException();
         }
     }
 
