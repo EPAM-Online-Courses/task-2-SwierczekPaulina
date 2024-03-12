@@ -33,17 +33,17 @@ public class GuessNumberGame {
     public void play() {
         //TODO: Implement the method that executes the game session
         int randomNumber = new Random().nextInt(M) + 1;
-        int limit = (int) Math.ceil(Math.log(M)/Math.log(2)) + 1;
+        int L = (int) Math.ceil(Math.log(M)/Math.log(2)) + 1;
         System.out.println("Zagrajmy. Zgadnij liczbę z zakresu <1," + M + ">");
 
         try (Scanner scanner = new Scanner(System.in)) {
             int trials = 1;
-            while (trials <= limit) {
+            while (trials <= L) {
                 System.out.print("Twoje próby: [");
                 for (int i = 0; i < trials; i++) {
                     System.out.print("*");
                 }
-                for (int i = trials; i < limit; i++) {
+                for (int i = trials; i < L; i++) {
                     System.out.print(".");
                 }
                 System.out.println("]");
@@ -67,7 +67,7 @@ public class GuessNumberGame {
                     System.out.println("To NIE WYSTARCZY");
                 }
             }
-            System.out.println("NIESTETY, wyczerpałeś limit prób (" + limit + ") do odgadnięcia liczby " + randomNumber);
+            System.out.println("NIESTETY, wyczerpałeś limit prób (" + L + ") do odgadnięcia liczby " + randomNumber);
         }
     }
 }
