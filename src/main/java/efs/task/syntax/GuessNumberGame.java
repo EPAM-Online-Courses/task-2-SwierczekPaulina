@@ -32,8 +32,9 @@ public class GuessNumberGame {
 
     public void play() {
         //TODO: Implement the method that executes the game session
-        int randomNumber = new Random().nextInt(M) + 1;
-        int L = (int) Math.ceil(Math.log(M)/Math.log(2)) + 1;
+        Random random = new Random();
+        int randomNumber = random.nextInt(M) + 1;
+        int L = (int) Math.abs(Math.log(M)/Math.log(2)) + 1;
         System.out.println("Zagrajmy. Zgadnij liczbę z zakresu <1," + M + ">");
 
         try (Scanner scanner = new Scanner(System.in)) {
